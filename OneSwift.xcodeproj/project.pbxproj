@@ -14,6 +14,18 @@
 		5B909BFA1CF92397004D90BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B909BF81CF92397004D90BC /* LaunchScreen.storyboard */; };
 		5B909C051CF92397004D90BC /* OneSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B909C041CF92397004D90BC /* OneSwiftTests.swift */; };
 		5B909C101CF92397004D90BC /* OneSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B909C0F1CF92397004D90BC /* OneSwiftUITests.swift */; };
+		5B909C231CF924EC004D90BC /* CancionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B909C221CF924EC004D90BC /* CancionDTO.swift */; };
+		5B909C251CF924F6004D90BC /* CancionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B909C241CF924F6004D90BC /* CancionParser.swift */; };
+		5B909C281CF92509004D90BC /* ConstantsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B909C261CF92509004D90BC /* ConstantsUtil.swift */; };
+		5B909C291CF92509004D90BC /* DownloadImageWithURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B909C271CF92509004D90BC /* DownloadImageWithURL.swift */; };
+		5B909C2B1CF92510004D90BC /* NetworkUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B909C2A1CF92510004D90BC /* NetworkUtil.swift */; };
+		5B909C2D1CF92518004D90BC /* WebRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B909C2C1CF92518004D90BC /* WebRequest.swift */; };
+		5B909C301CF92542004D90BC /* myTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B909C2F1CF92542004D90BC /* myTableViewCell.swift */; };
+		5B909C321CF9254E004D90BC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B909C311CF9254E004D90BC /* DetailViewController.swift */; };
+		5B909C3A1CF92A35004D90BC /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B909C391CF92A35004D90BC /* MBProgressHUD.m */; };
+		5B9519CC1CF9F946001F5A2E /* myCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9519CB1CF9F946001F5A2E /* myCollectionViewCell.swift */; };
+		5B9519CF1CFA10DE001F5A2E /* FinalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9519CE1CFA10DE001F5A2E /* FinalDetailViewController.swift */; };
+		5BB5AC281D171EA100C5C9AA /* LoaderUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB5AC271D171EA100C5C9AA /* LoaderUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +59,20 @@
 		5B909C0B1CF92397004D90BC /* OneSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B909C0F1CF92397004D90BC /* OneSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSwiftUITests.swift; sourceTree = "<group>"; };
 		5B909C111CF92397004D90BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B909C221CF924EC004D90BC /* CancionDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CancionDTO.swift; path = DTO/CancionDTO.swift; sourceTree = "<group>"; };
+		5B909C241CF924F6004D90BC /* CancionParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CancionParser.swift; path = Parser/CancionParser.swift; sourceTree = "<group>"; };
+		5B909C261CF92509004D90BC /* ConstantsUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConstantsUtil.swift; path = Util/ConstantsUtil.swift; sourceTree = "<group>"; };
+		5B909C271CF92509004D90BC /* DownloadImageWithURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DownloadImageWithURL.swift; path = Util/DownloadImageWithURL.swift; sourceTree = "<group>"; };
+		5B909C2A1CF92510004D90BC /* NetworkUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkUtil.swift; path = Util/NetworkUtil.swift; sourceTree = "<group>"; };
+		5B909C2C1CF92518004D90BC /* WebRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebRequest.swift; path = WebRequest/WebRequest.swift; sourceTree = "<group>"; };
+		5B909C2F1CF92542004D90BC /* myTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = myTableViewCell.swift; path = TableViewCell/myTableViewCell.swift; sourceTree = "<group>"; };
+		5B909C311CF9254E004D90BC /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = DetailViewController/DetailViewController.swift; sourceTree = "<group>"; };
+		5B909C371CF92A35004D90BC /* OneSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OneSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		5B909C381CF92A35004D90BC /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = Util/MBProgressHUD.h; sourceTree = "<group>"; };
+		5B909C391CF92A35004D90BC /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = Util/MBProgressHUD.m; sourceTree = "<group>"; };
+		5B9519CB1CF9F946001F5A2E /* myCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = myCollectionViewCell.swift; path = CollectionViewCell/myCollectionViewCell.swift; sourceTree = "<group>"; };
+		5B9519CE1CFA10DE001F5A2E /* FinalDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinalDetailViewController.swift; path = FinalDetailViewControler/FinalDetailViewController.swift; sourceTree = "<group>"; };
+		5BB5AC271D171EA100C5C9AA /* LoaderUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoaderUtil.swift; path = Util/LoaderUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +123,14 @@
 		5B909BEE1CF92397004D90BC /* OneSwift */ = {
 			isa = PBXGroup;
 			children = (
+				5B9519CD1CFA10B1001F5A2E /* FinalDetalleViewController */,
+				5B9519CA1CF9F53A001F5A2E /* CollectionsViewCell */,
+				5B909C1D1CF9248E004D90BC /* CollectionViewController */,
+				5B909C2E1CF92531004D90BC /* TablesViewCell */,
+				5B909C211CF924BC004D90BC /* DTO */,
+				5B909C201CF924AD004D90BC /* Parser */,
+				5B909C1F1CF924A4004D90BC /* Util */,
+				5B909C1E1CF9249B004D90BC /* WebRequest */,
 				5B909BEF1CF92397004D90BC /* AppDelegate.swift */,
 				5B909BF11CF92397004D90BC /* ViewController.swift */,
 				5B909BF31CF92397004D90BC /* Main.storyboard */,
@@ -123,6 +157,76 @@
 				5B909C111CF92397004D90BC /* Info.plist */,
 			);
 			path = OneSwiftUITests;
+			sourceTree = "<group>";
+		};
+		5B909C1D1CF9248E004D90BC /* CollectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5B909C311CF9254E004D90BC /* DetailViewController.swift */,
+			);
+			name = CollectionViewController;
+			sourceTree = "<group>";
+		};
+		5B909C1E1CF9249B004D90BC /* WebRequest */ = {
+			isa = PBXGroup;
+			children = (
+				5B909C2C1CF92518004D90BC /* WebRequest.swift */,
+			);
+			name = WebRequest;
+			sourceTree = "<group>";
+		};
+		5B909C1F1CF924A4004D90BC /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				5B909C381CF92A35004D90BC /* MBProgressHUD.h */,
+				5B909C391CF92A35004D90BC /* MBProgressHUD.m */,
+				5B909C2A1CF92510004D90BC /* NetworkUtil.swift */,
+				5B909C261CF92509004D90BC /* ConstantsUtil.swift */,
+				5B909C271CF92509004D90BC /* DownloadImageWithURL.swift */,
+				5B909C371CF92A35004D90BC /* OneSwift-Bridging-Header.h */,
+				5BB5AC271D171EA100C5C9AA /* LoaderUtil.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		5B909C201CF924AD004D90BC /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				5B909C241CF924F6004D90BC /* CancionParser.swift */,
+			);
+			name = Parser;
+			sourceTree = "<group>";
+		};
+		5B909C211CF924BC004D90BC /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				5B909C221CF924EC004D90BC /* CancionDTO.swift */,
+			);
+			name = DTO;
+			sourceTree = "<group>";
+		};
+		5B909C2E1CF92531004D90BC /* TablesViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5B909C2F1CF92542004D90BC /* myTableViewCell.swift */,
+			);
+			name = TablesViewCell;
+			sourceTree = "<group>";
+		};
+		5B9519CA1CF9F53A001F5A2E /* CollectionsViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5B9519CB1CF9F946001F5A2E /* myCollectionViewCell.swift */,
+			);
+			name = CollectionsViewCell;
+			sourceTree = "<group>";
+		};
+		5B9519CD1CFA10B1001F5A2E /* FinalDetalleViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5B9519CE1CFA10DE001F5A2E /* FinalDetailViewController.swift */,
+			);
+			name = FinalDetalleViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +360,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BB5AC281D171EA100C5C9AA /* LoaderUtil.swift in Sources */,
 				5B909BF21CF92397004D90BC /* ViewController.swift in Sources */,
+				5B9519CF1CFA10DE001F5A2E /* FinalDetailViewController.swift in Sources */,
+				5B909C2B1CF92510004D90BC /* NetworkUtil.swift in Sources */,
+				5B909C2D1CF92518004D90BC /* WebRequest.swift in Sources */,
+				5B909C281CF92509004D90BC /* ConstantsUtil.swift in Sources */,
+				5B909C3A1CF92A35004D90BC /* MBProgressHUD.m in Sources */,
 				5B909BF01CF92397004D90BC /* AppDelegate.swift in Sources */,
+				5B9519CC1CF9F946001F5A2E /* myCollectionViewCell.swift in Sources */,
+				5B909C301CF92542004D90BC /* myTableViewCell.swift in Sources */,
+				5B909C291CF92509004D90BC /* DownloadImageWithURL.swift in Sources */,
+				5B909C321CF9254E004D90BC /* DetailViewController.swift in Sources */,
+				5B909C251CF924F6004D90BC /* CancionParser.swift in Sources */,
+				5B909C231CF924EC004D90BC /* CancionDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,10 +517,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = OneSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.arce.angel.OneSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OneSwift/OneSwift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -412,10 +531,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = OneSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.arce.angel.OneSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OneSwift/OneSwift-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -484,6 +605,7 @@
 				5B909C161CF92397004D90BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B909C171CF92397004D90BC /* Build configuration list for PBXNativeTarget "OneSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +614,7 @@
 				5B909C191CF92397004D90BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B909C1A1CF92397004D90BC /* Build configuration list for PBXNativeTarget "OneSwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +623,7 @@
 				5B909C1C1CF92397004D90BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

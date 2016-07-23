@@ -1,40 +1,38 @@
 //
-//  ViewController.swift
-//  OneSwift
+//  DetailViewController.swift
+//  SwiftDemo01
 //
-//  Created by Angel Arce Carrillo on 27/05/16.
+//  Created by Angel Arce Carrillo on 25/05/16.
 //  Copyright © 2016 Angel Arce Carrillo. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
-    @IBOutlet weak var tableView: UITableView!
+class DetailViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    let segueIdentifierDetail = "prepareSegue"
+    var itemSelectCollectionView = 0
     
     var refreshControl: UIRefreshControl = UIRefreshControl()
-    let cellIdentifier = "miCelda"
+    let cellIdentifier = "miCeldaCollectionView"
     var dataSet = [CancionDTO]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         self.automaticallyAdjustsScrollViewInsets = false
         
         refreshControl = UIRefreshControl()
         refreshControl.attributedTitle = NSAttributedString(string: "Espere por favor")
         refreshControl.addTarget(self, action:#selector(self.pullToRefresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
-        self.tableView.addSubview(refreshControl)
+        self.collectionView.addSubview(refreshControl)
+        self.collectionView.alwaysBounceVertical = true;
         
         self.makeRequest(true)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
     func makeRequest(showProgress: Bool) {
         
         if showProgress {
@@ -42,8 +40,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             alert.label.text = "Espere por favor..."
         }
         
+        let dic = ["":""]
+        
         // Realizo la peticion
-        WebRequest().sendAsynchronousRequestForGET(ConstantsUtil.URL_REQUEST, inViewController: self, completionHandler: {(response: String) -> () in
+        WebRequest().sendAsynchronousRequestForPOST(ConstantsUtil.URL_REQUEST, json: dic, inViewController: self, completionHandler: {(response: String) -> () in
             
             if response == "No internet connection" {
                 
@@ -77,9 +77,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             }
             
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                self.tableView.dataSource = self
-                self.tableView.delegate = self
-                self.tableView.reloadData()
+                self.collectionView.dataSource = self
+                self.collectionView.delegate = self
+                self.collectionView.reloadData()
                 self.refreshControl.endRefreshing()
                 
                 if showProgress {
@@ -96,28 +96,41 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.makeRequest(false)
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.dataSet.count
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return dataSet.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! myTableViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellIdentifier, forIndexPath: indexPath) as! myCollectionViewCell
         
-        let cancion = dataSet[indexPath.row] as CancionDTO
+        let cancion = dataSet[indexPath.row]
         
-        DownloadImageWithURL().downloadImage(NSURL(string: cancion.urlImage)!, imageView: cell.miImagen)
-        cell.labelNameSong.text = cancion.nameSong
-        cell.labelArtist.text = cancion.nameArtist
+        DownloadImageWithURL().downloadImage(NSURL(string: cancion.urlImage)!, imageView: cell.imagenCancion)
+        cell.labelCancion.text = cancion.nameSong
         
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        //print("Has selecionado el item numero \(indexPath.row)")
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        //print("Presionaste el item \(indexPath.row)")
         
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        self.performSegueWithIdentifier("showDetail", sender: self)
+        self.itemSelectCollectionView = indexPath.row
+        self.performSegueWithIdentifier(self.segueIdentifierDetail, sender: self)
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSizeMake(100, 100)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == self.segueIdentifierDetail {
+            let viewController = segue.destinationViewController as! FinalDetailViewController
+            viewController.modelo = dataSet[self.itemSelectCollectionView]
+        }
     }
 }
-
